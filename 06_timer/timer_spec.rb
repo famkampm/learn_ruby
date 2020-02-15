@@ -7,7 +7,7 @@
 #
 # # Timer
 
-require 'timer'
+require "timer"
 
 describe "Timer" do
   before(:each) do
@@ -18,7 +18,7 @@ describe "Timer" do
     expect(@timer.seconds).to eq(0)
   end
 
-  describe 'time_string' do
+  describe "time_string" do
     it "should display 0 seconds as 00:00:00" do
       @timer.seconds = 0
       expect(@timer.time_string).to eq("00:00:00")
@@ -40,7 +40,6 @@ describe "Timer" do
     end
   end
 
-
   # One way to implement the Timer is with a helper method.
   # Uncomment these specs if you want to test-drive that
   # method, then call that method from inside of time_string.
@@ -56,5 +55,4 @@ describe "Timer" do
   #     expect(@timer.padded(12)).to eq('12')
   #   end
   # end
-
 end
