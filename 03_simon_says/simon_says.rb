@@ -25,12 +25,12 @@ def titleize(words)
   array_of_word = words.split
   blacklist = ["and", "over", "the"]
   array_of_word.each_with_index.map do |word, index|
-    word[0] = executor(word, index, blacklist)
+    word[0] = titleize_first_char(word, index, blacklist)
   end
   array_of_word.join(" ")
 end
 
-def executor(word, index, blacklist)
+def titleize_first_char(word, index, blacklist)
   return word[0].upcase if index == 0 || !blacklist.include?(word)
   word[0]
 end
